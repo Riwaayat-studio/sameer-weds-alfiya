@@ -3,25 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>The Royal Union — Sameer & Alfiya</title>
+    <title>The Royal Invitation — Sameer & Alfiya</title>
     <!-- Google Fonts Portal Injection -->
     <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@700;900&family=Cormorant+Garamond:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Canvas Component for Birthday Foil Sprinkle Blast Particle Mechanics -->
-    <canvas id="blastCanvas"></canvas>
+    <!-- Canvas Component for Background Hyper-Realistic Gold Dust Particles -->
+    <canvas id="ambientDustCanvas"></canvas>
 
-    <!-- 🎁 1. INTERACTIVE PULSE ENTRANCE GATEWAY -->
+    <!-- 🎁 1. HIGH-HYPER REALISTIC INTERACTIVE SPLIT GATE -->
     <div id="gift-vault-screen">
-        <div class="pulse-gate-container" onclick="unwrapGiftBox()">
-            <div class="gate-left-panel"></div>
-            <div class="gate-right-panel"></div>
-            <div class="interactive-pulse-orb">
-                <span class="orb-title">INVITATION</span>
-                <div class="orb-pulse-wave"></div>
-                <span class="orb-action">TAP TO OPEN</span>
+        <div class="split-gate-viewport" onclick="triggerGateDeployment()">
+            <div class="gate-blade blade-left">
+                <div class="gate-filigree-left"></div>
+            </div>
+            <div class="gate-blade blade-right">
+                <div class="gate-filigree-right"></div>
+            </div>
+            <div class="central-pulsing-orb-anchor">
+                <span class="orb-sub">WEDDING INVITATION</span>
+                <div class="orb-core-wave"></div>
+                <span class="orb-cta">TAP TO OPEN</span>
             </div>
         </div>
     </div>
@@ -31,7 +35,7 @@
         
         <!-- Premium Core Hero Zone with Cinzel Decorative Font Configuration -->
         <header class="hero-header-zone">
-            <p class=" Lucknowi-royal-tag">"Under the canopy of elegance and tradition, we cordially invite you to witness the royal union of..."</p>
+            <p class="lucknowi-royal-quote">"Under the canopy of elegance and tradition, we cordially invite you to witness the royal union of..."</p>
             <h1 class="main-title-cinzel">Sameer <span>&</span> Alfiya</h1>
             <p class="action-word premium-action-text scroll-indicator">SCROLL DOWN</p>
         </header>
@@ -60,7 +64,7 @@
             <h2 class="section-title">The Secret Reveal</h2>
             <div class="scratch-canvas-container physical-depth-box">
                 <div class="secret-birthday-message">
-                    <p>You are cordially invited to celebrate the union of Sameer & Alfiya.<br><br><strong>Thursday, 24 December 2026</strong><br>Save the auspicious date for our celebrations.</p>
+                    <p>You are cordially invited to celebrate the union of Sameer & Alfiya.<br><br><span style="color: #D4AF37; font-family: 'Cinzel', serif; letter-spacing: 2px;">THURSDAY, 24 DECEMBER 2026</span><br><span style="font-size: 1.1rem; opacity: 0.85;">Save the auspicious date for our celebrations.</span></p>
                 </div>
                 <canvas id="scratchCanvas"></canvas>
             </div>
@@ -97,17 +101,17 @@
                 <div class="timeline-card">
                     <h3 class="timeline-event-title">Nikah Ceremony</h3>
                     <p class="timeline-time">24 December 2026 | 10:00 PM</p>
-                    <p class="timeline-desc">Your gracious presence is requested as the sacred vows are sealed.</p>
+                    <p class="timeline-desc">Your gracious presence is requested as the sacred vows are sealed in elegance.</p>
                 </div>
                 <div class="timeline-card">
                     <h3 class="timeline-event-title">Grand Walima</h3>
                     <p class="timeline-time">25 December 2026 | 08:00 PM</p>
-                    <p class="timeline-desc">Join us for a royal feast to celebrate the newlywed couple.</p>
+                    <p class="timeline-desc">Join us for a royal feast to celebrate the newlywed couple's continuous journey.</p>
                 </div>
             </div>
         </section>
 
-        <!-- 📹 7. THE SMART DUCK VLOG FRAME -->
+        <!-- 📹 7. THE SMART DUCK VLOG FRAME (Wedding Special) -->
         <section class="section-container" id="videoSectionNode">
             <h2 class="section-title">The Celebration Footage</h2>
             <div class="smartphone-frame video-outline-aura">
@@ -124,7 +128,6 @@
                 <h3 class="venue-name">The Grand Palace Hall</h3>
                 <p class="venue-address">123 Royal Avenue, Hazratganj, Lucknow, UP</p>
                 <div class="map-iframe-container">
-                    <!-- Standard clean mock roadmap layout map -->
                     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.8871305419994!2d80.9442!3d26.8467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd0000000001%3A0x0!2sHazratganj%2C%20Lucknow!5e0!3m2!1sen!2sin!4v1650000000000" allowfullscreen="" loading="lazy"></iframe>
                 </div>
                 <a href="https://maps.google.com/?q=The+Grand+Palace+Hall+Hazratganj+Lucknow" target="_blank" class="navigation-gold-btn">NAVIGATE TO VENUE</a>
@@ -155,7 +158,7 @@
                 <input type="text" placeholder="Your Full Name" required class="rsvp-input">
                 <select class="rsvp-select" required id="attendanceDropdown">
                     <option value="" disabled selected>Are you attending?</option>
-                    <option value="yes-1">Yes, attending alone</option>
+                    <option value="yes-alone">Yes, attending alone</option>
                     <option value="yes-family">Yes, attending with family</option>
                     <option value="no">Regretfully, unable to attend</option>
                 </select>
