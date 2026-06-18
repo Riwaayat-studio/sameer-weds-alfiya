@@ -1,0 +1,212 @@
+/* ══ RESET & GLOBAL MESH CORE ══ */
+*, *::before, *::after {
+    margin: 0; padding: 0; box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent !important;
+    outline: none !important;
+}
+
+:root {
+    --bg-obsidian-black: #050911;
+    --bg-mesh-gradient: radial-gradient(circle at 50% 50%, #0c1629 0%, #050911 85%);
+    --rose-cream: #FFF2F8;
+    --liquid-gold: #D4AF37;
+    --neon-magenta-glow: rgba(212, 175, 55, 0.4);
+    --border-aura-glow: 2px solid #D4AF37;
+}
+
+body {
+    background: var(--bg-obsidian-black);
+    color: var(--rose-cream);
+    font-family: 'Cormorant Garamond', serif;
+    overflow-x: hidden;
+}
+
+#blastCanvas {
+    position: fixed; inset: 0; z-index: 99998; pointer-events: none; display: none;
+}
+
+/* ══ HIGH-END LUXURY ACTION WORDS ══ */
+.action-word.premium-action-text {
+    font-family: 'Cinzel', serif;
+    font-weight: 900; font-size: 1.05rem; color: var(--liquid-gold);
+    letter-spacing: 0.35em; text-transform: uppercase; text-align: center;
+    margin-top: 2rem; text-shadow: 0 3px 12px rgba(0,0,0,0.95);
+}
+
+/* 🎁 1. SMOOTH SPLITTING ENTRANCE GATEWAY MECHANICS */
+#gift-vault-screen {
+    position: fixed; inset: 0; z-index: 99999;
+    background: #050911; overflow: hidden; display: flex; align-items: center; justify-content: center;
+}
+
+.pulse-gate-container {
+    position: relative; width: 100%; height: 100%; cursor: pointer; display: flex;
+}
+
+.gate-left-panel, .gate-right-panel {
+    width: 50%; height: 100%; background: radial-gradient(circle at center, #0f1c33 0%, #050911 100%);
+    border: 1px solid rgba(214, 175, 55, 0.1);
+    transition: transform 1.1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.interactive-pulse-orb {
+    position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);
+    width: 140px; height: 140px; background: rgba(15, 28, 51, 0.75);
+    border: 2px solid var(--liquid-gold); border-radius: 50%;
+    backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+    display: flex; flex-direction: column; align-items: center; justify-content: center;
+    z-index: 10; box-shadow: 0 0 30px rgba(0,0,0,0.8), inset 0 0 15px rgba(214, 175, 55, 0.2);
+    transition: opacity 0.5s ease, scale 0.5s ease;
+}
+
+.orb-title { font-family: 'Cinzel', serif; font-size: 0.8rem; letter-spacing: 0.2em; color: var(--rose-cream); opacity: 0.7; margin-bottom: 5px; }
+.orb-action { font-family: 'Cinzel', serif; font-size: 0.9rem; font-weight: 900; letter-spacing: 0.1em; color: var(--liquid-gold); }
+
+.orb-pulse-wave {
+    position: absolute; inset: -2px; border: 2px solid var(--liquid-gold); border-radius: 50%;
+    animation: orbPulse 2s cubic-bezier(0.165, 0.84, 0.44, 1) infinite; pointer-events: none;
+}
+
+@keyframes orbPulse {
+    0% { transform: scale(1); opacity: 0.8; }
+    100% { transform: scale(1.4); opacity: 0; }
+}
+
+/* Gate Trigger States */
+#gift-vault-screen.open-active .gate-left-panel { transform: translateX(-100%); }
+#gift-vault-screen.open-active .gate-right-panel { transform: translateX(100%); }
+#gift-vault-screen.open-active .interactive-pulse-orb { opacity: 0; scale: 0.5; }
+
+/* ══ MAIN WORKSPACE CONTAINER ══ */
+#main-content-vault {
+    display: none; opacity: 0; background: var(--bg-mesh-gradient); min-height: 100vh; transition: opacity 1.2s ease;
+}
+
+.hero-header-zone { min-height: 100vh; display: flex; flex-direction: column; align-items: center; justify-content: center; padding: 2rem; text-align: center; }
+
+.Lucknowi-royal-tag {
+    font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.4rem;
+    color: rgba(255,242,248,0.75); max-width: 520px; margin-bottom: 2rem; line-height: 1.6;
+}
+
+.main-title-cinzel {
+    font-family: 'Cinzel Decorative', serif; font-weight: 900; font-size: clamp(2.4rem, 6.5vw, 4.5rem);
+    color: var(--rose-cream); text-shadow: 0 4px 20px rgba(0,0,0,0.9);
+}
+
+.main-title-cinzel span {
+    display: block; font-size: 0.9em; margin: 0.3rem 0; color: var(--liquid-gold);
+    text-shadow: 0 0 30px rgba(214,175,55,0.4);
+}
+
+/* ══ DYNAMIC VIEWPORT FOCUS LOOKBOOK ══ */
+.section-container { padding: 7rem 1.5rem; display: flex; flex-direction: column; align-items: center; width: 100%; }
+.section-title {
+    font-family: 'Cinzel', serif; font-weight: 900; font-size: 2rem; color: var(--liquid-gold); margin-bottom: 4rem; text-transform: uppercase; letter-spacing: 0.25em; text-align: center;
+}
+
+.stack-deck-wrapper { width: 100%; max-width: 420px; display: flex; flex-direction: column; gap: 8rem; }
+
+.stack-card-item {
+    background: rgba(15,28,51,0.2); border: 1px solid rgba(214,175,55,0.15); border-radius: 12px;
+    padding: 1.2rem 1.2rem 2.5rem 1.2rem; box-shadow: 0 30px 60px rgba(0,0,0,0.7);
+    transform: translateY(40px) scale(0.95); opacity: 0.3; filter: blur(4px);
+    transition: transform 0.8s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.8s, filter 0.8s, border-color 0.5s;
+}
+
+.stack-card-item.active-center {
+    transform: translateY(0) scale(1.04); opacity: 1; filter: blur(0px);
+    border-color: var(--liquid-gold); box-shadow: 0 30px 60px var(--neon-magenta-glow);
+}
+
+.stack-card-item img { width: 100%; aspect-ratio: 4/5; object-fit: cover; border-radius: 6px; margin-bottom: 1.5rem; }
+.card-caption { font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 700; font-size: 1.3rem; text-align: center; line-height: 1.6; }
+
+/* 🔒 4. GLASS METALLIC SCRATCH CONTAINER ══ */
+.physical-depth-box { border: var(--border-aura-glow); border-radius: 8px; box-shadow: 0 30px 60px rgba(0,0,0,0.9); }
+.scratch-canvas-container { position: relative; width: 100%; max-width: 440px; aspect-ratio: 1.9/1; background: #0b1321; overflow: hidden; }
+.secret-birthday-message { position: absolute; inset: 0; padding: 1.5rem; display: flex; align-items: center; justify-content: center; text-align: center; }
+.secret-birthday-message p { font-family: 'Cormorant Garamond', serif; font-weight: 700; font-size: 1.3rem; line-height: 1.6; color: var(--rose-cream); font-style: italic; }
+#scratchCanvas { position: absolute; inset: 0; cursor: pointer; z-index: 3; }
+
+/* ⏳ 5. THE LUXURY LIVE COUNTDOWN TIMER ══ */
+.countdown-wrapper { display: flex; gap: 1rem; width: 100%; max-width: 460px; justify-content: center; }
+.countdown-box {
+    background: rgba(15,28,51,0.5); border: 1px solid rgba(214,175,55,0.2); border-radius: 10px;
+    width: 22%; aspect-ratio: 1/1; display: flex; flex-direction: column; align-items: center; justify-content: center;
+    backdrop-filter: blur(6px); -webkit-backdrop-filter: blur(6px);
+}
+.countdown-box span { font-family: 'Cinzel', serif; font-size: 1.8rem; font-weight: 900; color: var(--liquid-gold); }
+.countdown-box p { font-family: 'Cinzel', serif; font-size: 0.65rem; letter-spacing: 0.1em; opacity: 0.6; margin-top: 2px; }
+
+/* 🗓️ 6. THE PROGRAM TIMELINE MATRIX ══ */
+.timeline-container { display: flex; flex-direction: column; gap: 2rem; width: 100%; max-width: 440px; }
+.timeline-card {
+    background: rgba(15,28,51,0.3); border-left: 3px solid var(--liquid-gold); padding: 1.8rem; border-radius: 0 10px 10px 0;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+.timeline-event-title { font-family: 'Cinzel', serif; font-size: 1.3rem; color: var(--liquid-gold); letter-spacing: 0.05em; }
+.timeline-time { font-family: 'Cinzel', serif; font-size: 0.85rem; opacity: 0.8; margin: 0.5rem 0 1rem 0; color: var(--rose-cream); }
+.timeline-desc { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.2rem; opacity: 0.7; line-height: 1.5; }
+
+/* 📹 7. THE SMART DUCK VLOG FRAME ══ */
+.smartphone-frame { width: min(315px, 85vw); aspect-ratio: 9/16; background: #000; border-radius: 26px; overflow: hidden; margin: 0 auto; }
+.video-outline-aura { border: var(--border-aura-glow); box-shadow: 0 0 35px var(--neon-magenta-glow); }
+.smartphone-frame video { width: 100%; height: 100%; object-fit: cover; }
+
+/* 🗺️ 8. THE VENUE MAP INTERFACE ══ */
+.venue-display-box {
+    width: 100%; max-width: 440px; background: rgba(15,28,51,0.4); border: 1px solid rgba(214,175,55,0.2);
+    border-radius: 12px; padding: 2rem; display: flex; flex-direction: column; align-items: center; text-align: center;
+}
+.venue-name { font-family: 'Cinzel', serif; font-size: 1.4rem; color: var(--liquid-gold); }
+.venue-address { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.2rem; opacity: 0.7; margin: 0.5rem 0 1.5rem 0; }
+.map-iframe-container { width: 100%; aspect-ratio: 1.7/1; border-radius: 8px; overflow: hidden; margin-bottom: 1.8rem; border: 1px solid rgba(214,175,55,0.1); }
+.map-iframe-container iframe { width: 100%; height: 100%; border: 0; filter: invert(90%) hue-rotate(180deg); }
+.navigation-gold-btn {
+    display: inline-block; width: 100%; padding: 1rem; background: transparent; border: 1px solid var(--liquid-gold);
+    color: var(--liquid-gold); font-family: 'Cinzel', serif; font-weight: 900; font-size: 0.9rem; letter-spacing: 0.15em;
+    text-decoration: none; border-radius: 6px; transition: background 0.4s, color 0.4s; box-shadow: 0 4px 15px rgba(0,0,0,0.4);
+}
+.navigation-gold-btn:hover { background: var(--liquid-gold); color: #050911; }
+
+/* 👗 9. THE DRESS CODE SPECIFICATION ══ */
+.dress-code-wrapper { display: flex; gap: 1.5rem; width: 100%; max-width: 440px; }
+.dress-card {
+    width: 50%; background: rgba(15,28,51,0.3); border: 1px solid rgba(214,175,55,0.1); border-radius: 10px;
+    padding: 1.5rem; text-align: center; display: flex; flex-direction: column; align-items: center;
+}
+.dress-card h3 { font-family: 'Cinzel', serif; font-size: 1.1rem; color: var(--liquid-gold); margin-bottom: 0.8rem; letter-spacing: 0.05em; }
+.dress-card p { font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 1.15rem; opacity: 0.7; line-height: 1.5; }
+
+/* 🧧 10. THE PERSONALIZED RSVP GUEST TRACKER ══ */
+.rsvp-form-box { width: 100%; max-width: 440px; display: flex; flex-direction: column; gap: 1.2rem; }
+.rsvp-input, .rsvp-select, .rsvp-textarea {
+    width: 100%; background: rgba(15,28,51,0.6); border: 1px solid rgba(214,175,55,0.2);
+    border-radius: 6px; padding: 1rem; color: var(--rose-cream); font-family: 'Cormorant Garamond', serif; font-size: 1.2rem;
+}
+.rsvp-select { appearance: none; -webkit-appearance: none; }
+.rsvp-textarea { aspect-ratio: 2.2/1; resize: none; }
+.rsvp-submit-btn {
+    width: 100%; padding: 1.1rem; background: var(--liquid-gold); border: none; border-radius: 6px;
+    font-family: 'Cinzel', serif; font-weight: 900; font-size: 0.95rem; color: #050911; letter-spacing: 0.2em;
+    cursor: pointer; box-shadow: 0 10px 25px rgba(214,175,55,0.2); transition: transform 0.3s;
+}
+.rsvp-submit-btn:active { transform: scale(0.98); }
+
+/* 🎵 GLASSMORPHIC INTERACTIVE AUDIO CONTROLLER ══ */
+#audio-orb-controller {
+    position: fixed; top: 20px; right: 20px; z-index: 99990;
+    width: 45px; height: 45px; background: rgba(15,28,51,0.6); border: 1px solid var(--liquid-gold);
+    border-radius: 50%; display: flex; align-items: center; justify-content: center; gap: 3px;
+    cursor: pointer; backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px); box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+}
+.wave-bar { width: 3px; height: 15px; background: var(--liquid-gold); border-radius: 2px; transition: height 0.3s ease; }
+#audio-orb-controller.playing .wave-bar { animation: audioDance 1.2s ease-in-out infinite alternate; }
+#audio-orb-controller.playing .wave-bar:nth-child(2) { animation-delay: 0.3s; }
+#audio-orb-controller.playing .wave-bar:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes audioDance { 0% { height: 5px; } 100% { height: 22px; } }
+
+footer { text-align: center; padding: 5rem 1rem; border-top: 1px solid rgba(255,255,255,0.04); font-family: 'Cinzel', serif; font-size: 0.75rem; letter-spacing: 0.25em; opacity: 0.35; }
+  
