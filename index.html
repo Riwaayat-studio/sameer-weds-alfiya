@@ -3,27 +3,37 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>The Royal Invitation — Sameer & Alfiya</title>
-    <!-- Google Fonts Portal Injection -->
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@700;900&family=Cormorant+Garamond:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
+    <title>The Royal Union — Sameer & Alfiya</title>
+    <!-- Google Fonts Portal Hub: Handpicked Locked Premium Typographies -->
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Cinzel:wght@400;700;900&family=Cormorant+Garamond:ital,wght@1,600;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <!-- Canvas Component for Background Hyper-Realistic Gold Dust Particles -->
+    <!-- SVG Low-Visibility Arabesque Vector Mandala Background Overlay -->
+    <div class="vector-background-layer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" opacity="0.04">
+            <defs>
+                <pattern id="mandalaGrid" width="120" height="120" patternUnits="userSpaceOnUse">
+                    <circle cx="60" cy="60" r="45" fill="none" stroke="#C5A059" stroke-width="0.8" stroke-dasharray="2,4"/>
+                    <path d="M60 0 L60 120 M0 60 L120 60" stroke="#C5A059" stroke-width="0.4" opacity="0.5"/>
+                    <polygon points="60,35 75,60 60,85 45,60" fill="none" stroke="#C5A059" stroke-width="0.6"/>
+                </pattern>
+            </defs>
+            <rect width="100%" height="100%" fill="url(#mandalaGrid)"/>
+        </svg>
+    </div>
+
+    <!-- Canvas Component for Background Fluid Micro Gold Dust Particles -->
     <canvas id="ambientDustCanvas"></canvas>
 
-    <!-- 🎁 1. HIGH-HYPER REALISTIC INTERACTIVE SPLIT GATE -->
+    <!-- 🎁 1. HIGH-HYPER REALISTIC POP-UP SPARKLE GATE -->
     <div id="gift-vault-screen">
         <div class="split-gate-viewport" onclick="triggerGateDeployment()">
-            <div class="gate-blade blade-left">
-                <div class="gate-filigree-left"></div>
-            </div>
-            <div class="gate-blade blade-right">
-                <div class="gate-filigree-right"></div>
-            </div>
-            <div class="central-pulsing-orb-anchor">
-                <span class="orb-sub">WEDDING INVITATION</span>
+            <div class="gate-blade blade-left"></div>
+            <div class="gate-blade blade-right"></div>
+            <div class="central-metallic-orb-anchor">
+                <span class="orb-initials">S & A</span>
                 <div class="orb-core-wave"></div>
                 <span class="orb-cta">TAP TO OPEN</span>
             </div>
@@ -35,43 +45,25 @@
         
         <!-- Premium Core Hero Zone with Cinzel Decorative Font Configuration -->
         <header class="hero-header-zone">
+            <p class="bismillah-script">بِسْمِ اللهِ الرَّحْمٰنِ الرَّحِيمِ</p>
             <p class="lucknowi-royal-quote">"Under the canopy of elegance and tradition, we cordially invite you to witness the royal union of..."</p>
             <h1 class="main-title-cinzel">Sameer <span>&</span> Alfiya</h1>
             <p class="action-word premium-action-text scroll-indicator">SCROLL DOWN</p>
         </header>
 
-        <!-- 📸 3. THE AUTOMATIC VIEWPORT SCROLL PARALLAX LOOKBOOK -->
-        <section class="section-container">
-            <h2 class="section-title">The Royal Lookbook</h2>
-            <div class="stack-deck-wrapper">
-                <div class="stack-card-item auto-parallax">
-                    <img src="pic1.png" alt="Sameer & Alfiya 1">
-                    <p class="card-caption">Beginning of an eternal journey rooted in love and grace.</p>
-                </div>
-                <div class="stack-card-item auto-parallax">
-                    <img src="pic2.png" alt="Sameer & Alfiya 2">
-                    <p class="card-caption">Two souls, one beautiful destination called togetherness.</p>
-                </div>
-                <div class="stack-card-item auto-parallax">
-                    <img src="pic3.png" alt="Sameer & Alfiya 3">
-                    <p class="card-caption">Cherishing the golden moments of a royal celebration.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- 🔒 4. BRUSHED LIQUID GOLD METALLIC FOIL SCRATCH BLOCK -->
+        <!-- 🔒 3. BRUSHED MATTE GOLD FOIL SCRATCH BLOCK -->
         <section class="section-container">
             <h2 class="section-title">The Secret Reveal</h2>
             <div class="scratch-canvas-container physical-depth-box">
-                <div class="secret-birthday-message">
-                    <p>You are cordially invited to celebrate the union of Sameer & Alfiya.<br><br><span style="color: #D4AF37; font-family: 'Cinzel', serif; letter-spacing: 2px;">THURSDAY, 24 DECEMBER 2026</span><br><span style="font-size: 1.1rem; opacity: 0.85;">Save the auspicious date for our celebrations.</span></p>
+                <div class="secret-wedding-message">
+                    <p>You are cordially invited to celebrate the union of Sameer & Alfiya.<br><br><span class="reveal-date-highlight">THURSDAY, 24 DECEMBER 2026</span><br><span style="font-size: 1.15rem; opacity: 0.8;">Save the auspicious date for our celebrations.</span></p>
                 </div>
                 <canvas id="scratchCanvas"></canvas>
             </div>
             <p class="action-word premium-action-text scratch-hint-text">SCRATCH TO REVEAL DETAILS</p>
         </section>
 
-        <!-- ⏳ 5. THE LUXURY LIVE COUNTDOWN TIMER -->
+        <!-- ⏳ 4. RECTANGULAR GRID LIVE COUNTDOWN CLOCK -->
         <section class="section-container">
             <h2 class="section-title">Counting Down To Forever</h2>
             <div class="countdown-wrapper">
@@ -94,7 +86,7 @@
             </div>
         </section>
 
-        <!-- 🗓️ 6. THE PROGRAM TIMELINE MATRIX -->
+        <!-- 🗓️ 5. THE PROGRAM TIMELINE MATRIX -->
         <section class="section-container">
             <h2 class="section-title">Program Timeline</h2>
             <div class="timeline-container">
@@ -111,7 +103,7 @@
             </div>
         </section>
 
-        <!-- 📹 7. THE SMART DUCK VLOG FRAME (Wedding Special) -->
+        <!-- 📹 6. THE SMART DUCK VLOG FRAME (Audio Surveillance Target) -->
         <section class="section-container" id="videoSectionNode">
             <h2 class="section-title">The Celebration Footage</h2>
             <div class="smartphone-frame video-outline-aura">
@@ -121,20 +113,20 @@
             </div>
         </section>
 
-        <!-- 🗺️ 8. THE VENUE MAP INTERFACE -->
+        <!-- 🗺️ 7. THE VENUE MAP INTERFACE: SAPPHIRE SUITES EXCLUSIVE -->
         <section class="section-container">
             <h2 class="section-title">The Venue</h2>
             <div class="venue-display-box">
-                <h3 class="venue-name">The Grand Palace Hall</h3>
-                <p class="venue-address">123 Royal Avenue, Hazratganj, Lucknow, UP</p>
-                <div class="map-iframe-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3559.8871305419994!2d80.9442!3d26.8467!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x399bfd0000000001%3A0x0!2sHazratganj%2C%20Lucknow!5e0!3m2!1sen!2sin!4v1650000000000" allowfullscreen="" loading="lazy"></iframe>
+                <div class="banquet-photo-frame">
+                    <img src="1000174705.jpg" alt="Sapphire Suites Banquet Hall" class="banquet-img">
                 </div>
-                <a href="https://maps.google.com/?q=The+Grand+Palace+Hall+Hazratganj+Lucknow" target="_blank" class="navigation-gold-btn">NAVIGATE TO VENUE</a>
+                <h3 class="venue-name">Sapphire Suites</h3>
+                <p class="venue-address">VX86+643, Metro City Centre, Nishatganj Bridge, Balmikinagar, Lucknow, UP 226006</p>
+                <a href="https://maps.google.com/?q=Sapphire+Suites+Nishatganj+Lucknow" target="_blank" class="navigation-gold-btn">TAP TO SEE VENUE DETAILS</a>
             </div>
         </section>
 
-        <!-- 👗 9. THE DRESS CODE SPECIFICATION -->
+        <!-- 👗 8. THE DRESS CODE SPECIFICATION -->
         <section class="section-container">
             <h2 class="section-title">Dress Code</h2>
             <div class="dress-code-wrapper">
@@ -151,19 +143,47 @@
             </div>
         </section>
 
-        <!-- 🧧 10. THE PERSONALIZED RSVP GUEST TRACKER -->
+        <!-- 🧧 9. THE PERSONALIZED RSVP CONDITIONAL UX GUEST TRACKER -->
         <section class="section-container">
             <h2 class="section-title">Send Your Blessings</h2>
             <form id="rsvpForm" class="rsvp-form-box">
+                
+                <!-- Toggle Acceptance Buttons -->
+                <div class="rsvp-toggle-container">
+                    <button type="button" class="toggle-btn active" id="btnAccept" onclick="setRSVPStatus(true)">JOYFULLY ACCEPT</button>
+                    <button type="button" class="toggle-btn" id="btnDecline" onclick="setRSVPStatus(false)">REGRETFULLY DECLINE</button>
+                </div>
+
+                <!-- Side Choice Matrix -->
+                <div class="rsvp-side-selector">
+                    <label class="side-radio-label">
+                        <input type="radio" name="guestSide" value="groom" checked>
+                        <span>Groom Side</span>
+                    </label>
+                    <label class="side-radio-label">
+                        <input type="radio" name="guestSide" value="bride">
+                        <span>Bride Side</span>
+                    </label>
+                </div>
+
                 <input type="text" placeholder="Your Full Name" required class="rsvp-input">
-                <select class="rsvp-select" required id="attendanceDropdown">
-                    <option value="" disabled selected>Are you attending?</option>
-                    <option value="yes-alone">Yes, attending alone</option>
-                    <option value="yes-family">Yes, attending with family</option>
-                    <option value="no">Regretfully, unable to attend</option>
-                </select>
-                <textarea placeholder="Write your heartfelt wishes & prayers for Sameer & Alfiya..." required class="rsvp-textarea"></textarea>
-                <button type="submit" class="rsvp-submit-btn">SUBMIT RESPONSE</button>
+                <input type="tel" placeholder="Phone Number" required class="rsvp-input">
+
+                <!-- Conditional Total Guests Field Container -->
+                <div id="conditional-guests-node" class="conditional-field-wrapper">
+                    <label class="field-instruction-label">Total Attending Guests</label>
+                    <div class="guest-circles-row">
+                        <span class="circle-opt active" onclick="selectGuestCount(1)">1</span>
+                        <span class="circle-opt" onclick="selectGuestCount(2)">2</span>
+                        <span class="circle-opt" onclick="selectGuestCount(3)">3</span>
+                        <span class="circle-opt" onclick="selectGuestCount(4)">4</span>
+                        <span class="circle-opt" onclick="selectGuestCount(5)">5</span>
+                    </div>
+                    <input type="number" id="manualGuestInput" placeholder="Or enter manually (e.g. 6)" class="rsvp-input numeric-override" min="1" oninput="clearCircleActiveState()">
+                </div>
+
+                <textarea placeholder="Message for couple / groom and bride..." required class="rsvp-textarea"></textarea>
+                <button type="submit" class="rsvp-submit-btn">SEND CONFIRMATION</button>
             </form>
         </section>
 
@@ -187,5 +207,5 @@
 
     <script src="script.js"></script>
 </body>
-</html>
+                    </html>
 
