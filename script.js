@@ -275,4 +275,4 @@ document.getElementById('rsvpForm').addEventListener('submit', function(e) {
     setRSVPStatus(true);
     selectGuestCount(1);
 });
-                
+            
