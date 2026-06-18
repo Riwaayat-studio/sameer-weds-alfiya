@@ -1,4 +1,4 @@
-// ════════ 1. REAL REALISTIC AMBIENT GOLD DUST ENGINE ════════
+// ════════ 1. HYPER REALISTIC AMBIENT GOLD DUST ENGINE ════════
 let dustCanvas, dustCtx, particlesArray = [];
 
 function initAmbientDustEngine() {
@@ -15,7 +15,7 @@ function initAmbientDustEngine() {
             x: Math.random() * dustCanvas.width,
             y: Math.random() * dustCanvas.height,
             radius: Math.random() * 1.4 + 0.4,
-            speedY: Math.random() * 0.35 + 0.1,
+            speedY: Math.random() * 0.32 + 0.1,
             speedX: Math.random() * 0.2 - 0.1,
             opacity: Math.random() * 0.5 + 0.2
         });
@@ -37,28 +37,25 @@ function initAmbientDustEngine() {
     renderDustLoop();
 }
 
-// ════════ 2. DYNAMIC EXPLOSION ENGINE (SPARKLE BLAST ON TAP) ════════
+// ════════ 2. MICROSCOPIC SPARKLE ENGINE (ORB POP EXPLOSION) ════════
 let sparkleParticles = [];
 function triggerSparkleBlast(clickX, clickY) {
     const canvas = document.createElement('canvas');
-    canvas.style.position = 'fixed';
-    canvas.style.inset = '0';
-    canvas.style.zIndex = '999999';
-    canvas.style.pointerEvents = 'none';
+    canvas.style.position = 'fixed'; canvas.style.inset = '0';
+    canvas.style.zIndex = '999999'; canvas.style.pointerEvents = 'none';
     document.body.appendChild(canvas);
     
     const ctx = canvas.getContext('2d');
     canvas.width = window.innerWidth; canvas.height = window.innerHeight;
     
-    for (let i = 0; i < 85; i++) {
+    for (let i = 0; i < 90; i++) {
         sparkleParticles.push({
             x: clickX, y: clickY,
-            radius: Math.random() * 3 + 1,
-            speedX: (Math.random() - 0.5) * 14,
-            speedY: (Math.random() - 0.5) * 14,
-            gravity: 0.15,
-            opacity: 1,
-            color: '#C5A059'
+            radius: Math.random() * 2.8 + 1,
+            speedX: (Math.random() - 0.5) * 15,
+            speedY: (Math.random() - 0.5) * 15,
+            gravity: 0.16,
+            opacity: 1
         });
     }
     
@@ -67,7 +64,7 @@ function triggerSparkleBlast(clickX, clickY) {
         let alive = false;
         
         sparkleParticles.forEach(p => {
-            p.speedY += p.gravity; p.x += p.speedX; p.y += p.speedY; p.opacity -= 0.02;
+            p.speedY += p.gravity; p.x += p.speedX; p.y += p.speedY; p.opacity -= 0.022;
             if (p.opacity > 0) {
                 alive = true;
                 ctx.beginPath(); ctx.arc(p.x, p.y, p.radius, 0, Math.PI * 2);
@@ -80,7 +77,7 @@ function triggerSparkleBlast(clickX, clickY) {
     animateSparkles();
 }
 
-// 🚪 3. EXTRACT FROM 2ND VIDEO: GATEWAY INITIAL DEPTH ANIMATION
+// 🚪 3. DYNAMIC TRANSITION TRIGGER PIPELINE
 let isGateDestroyed = false;
 
 function triggerGateDeployment() {
@@ -89,11 +86,9 @@ function triggerGateDeployment() {
 
     const gateScreen = document.getElementById('gift-vault-screen');
     
-    // Step A: Trigger Micro scale pop-up animation on core orb
     gateScreen.classList.add('orb-clicked');
     triggerSparkleBlast(window.innerWidth / 2, window.innerHeight / 2);
 
-    // Step B: Deploy sliding gates after pop-up compression
     setTimeout(() => {
         gateScreen.classList.add('gate-deployed');
         
@@ -108,21 +103,19 @@ function triggerGateDeployment() {
                 initCountdownEngine();   
             }, 50);
 
-            // Audio Stream Connection Setup
             const music = document.getElementById('bgMusic');
             const audioOrb = document.getElementById('audio-orb-controller');
             if (music) { 
-                music.volume = 0.6; 
+                music.volume = 0.55; 
                 music.play()
                     .then(() => audioOrb.classList.add('playing'))
-                    .catch(() => console.log("Audio waiting interface token.")); 
+                    .catch(() => console.log("Stream pending user touch gesture.")); 
             }
-            initScrollSurveillance();
         }, 1100);
     }, 280);
 }
 
-// 🎵 4. AUDIO SWITCH CORE
+// 🎵 4. INTERACTIVE AUDIO TOGGLE HANDLE
 function toggleAudioEngine() {
     const music = document.getElementById('bgMusic');
     const audioOrb = document.getElementById('audio-orb-controller');
@@ -137,7 +130,7 @@ function toggleAudioEngine() {
     }
 }
 
-// ⏳ 5. AUTOMATIC COUNTDOWN ENGINE MODULE
+// ⏳ 5. COUNTDOWN CLOCK TRANSLATION ENGINE
 function initCountdownEngine() {
     const weddingTimestamp = new Date("December 24, 2026 22:00:00").getTime();
 
@@ -161,31 +154,32 @@ function initCountdownEngine() {
     const clockInterval = setInterval(updateClock, 1000);
 }
 
-// 🧮 6. HIGH-REALISM NOISE MATTE GOLD CANVAS SCRATCH SURFACE GENERATOR
+// 🧮 6. RESPONSIVE LAYER BOUNDED CANVAS SCRATCH MATRIX
 function initScratchModule() {
     const canvas = document.getElementById('scratchCanvas');
-    if (!canvas) return;
+    const container = document.getElementById('scratchBoxNode');
+    if (!canvas || !container) return;
     const ctx = canvas.getContext('2d');
     
-    const box = canvas.getBoundingClientRect();
-    canvas.width = box.width; canvas.height = box.height;
+    canvas.width = container.clientWidth; 
+    canvas.height = container.clientHeight;
 
     let goldGrad = ctx.createLinearGradient(0, 0, canvas.width, canvas.height);
     goldGrad.addColorStop(0, '#6B5214');  
-    goldGrad.addColorStop(0.3, '#C5A059'); 
+    goldGrad.addColorStop(0.25, '#C5A059'); 
     goldGrad.addColorStop(0.5, '#EFE0A7'); 
-    goldGrad.addColorStop(0.7, '#A57E24'); 
+    goldGrad.addColorStop(0.75, '#A57E24'); 
     goldGrad.addColorStop(1, '#3E2F08');  
 
     ctx.fillStyle = goldGrad; ctx.fillRect(0, 0, canvas.width, canvas.height);
     
-    for (let i = 0; i < 850; i++) {
+    for (let i = 0; i < 900; i++) {
         let x = Math.random() * canvas.width; let y = Math.random() * canvas.height;
         ctx.fillStyle = Math.random() > 0.5 ? 'rgba(255,255,255,0.12)' : 'rgba(0,0,0,0.08)';
         ctx.fillRect(x, y, 1.2, 1.2);
     }
 
-    ctx.font = '700 11px Cinzel, serif'; ctx.fillStyle = '#030813'; ctx.letterSpacing = '3px'; ctx.textAlign = 'center';
+    ctx.font = '700 11px Cinzel, serif'; ctx.fillStyle = '#02060e'; ctx.letterSpacing = '3px'; ctx.textAlign = 'center';
     ctx.fillText('SCRATCH TO REVEAL DETAILS', canvas.width / 2, canvas.height / 2 + 4);
 
     let isDrawing = false;
@@ -195,45 +189,18 @@ function initScratchModule() {
         const clientX = e.touches ? e.touches[0].clientX : e.clientX;
         const clientY = e.touches ? e.touches[0].clientY : e.clientY;
         ctx.globalCompositeOperation = 'destination-out';
-        ctx.beginPath(); ctx.arc(clientX - rect.left, clientY - rect.top, 25, 0, Math.PI * 2); ctx.fill();
+        ctx.beginPath(); ctx.arc(clientX - rect.left, clientY - rect.top, 26, 0, Math.PI * 2); ctx.fill();
     }
 
     canvas.addEventListener('mousedown', () => isDrawing = true);
-    canvas.addEventListener('mouseup', () => isDrawing = false);
+    window.addEventListener('mouseup', () => isDrawing = false);
     canvas.addEventListener('mousemove', scratchAction);
     canvas.addEventListener('touchstart', () => isDrawing = true);
-    canvas.addEventListener('touchend', () => isDrawing = false);
+    window.addEventListener('touchend', () => isDrawing = false);
     canvas.addEventListener('touchmove', scratchAction);
 }
 
-// 📸 7. SCROLL OBSERVATION PHYSICS LAYER
-function initScrollSurveillance() {
-    const cards = document.querySelectorAll('.auto-parallax');
-    const observer = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && entry.intersectionRatio >= 0.35) {
-                entry.target.classList.add('active-center');
-            } else { entry.target.classList.remove('active-center'); }
-        });
-    }, { root: null, threshold: [0.1, 0.35, 0.85], rootMargin: "-10% 0px -10% 0px" });
-
-    cards.forEach(card => observer.observe(card));
-    window.addEventListener('scroll', crossfadeAudioSurveillance);
-}
-
-function crossfadeAudioSurveillance() {
-    const videoSection = document.getElementById('videoSectionNode');
-    const video = document.getElementById('vlogVideo');
-    const music = document.getElementById('bgMusic');
-    if (!videoSection || !video || !music) return;
-
-    const bounds = videoSection.getBoundingClientRect();
-    if (bounds.top < window.innerHeight * 0.6 && bounds.bottom > window.innerHeight * 0.4) {
-        if (video.paused) { video.play().catch(() => {}); music.volume = 0.1; video.volume = 0.95; }
-    } else { if (!video.paused) { video.pause(); music.volume = 0.6; } }
-}
-
-// 🧧 8. RSVP ENGINE CONDITIONAL CONDITIONAL VARIABLE HANDLING
+// 🧧 7. RSVP ENGINE CONDITIONAL HANDLING
 let isAttendingWedding = true;
 let selectedGuestCountValue = 1;
 
@@ -253,11 +220,9 @@ function setRSVPStatus(status) {
 
 function selectGuestCount(count) {
     selectedGuestCountValue = count;
-    document.getElementById('manualGuestInput').value = ''; // Reset manual input
+    document.getElementById('manualGuestInput').value = ''; 
     const circles = document.querySelectorAll('.circle-opt');
-    circles.forEach((c, idx) => {
-        c.classList.toggle('active', idx === (count - 1));
-    });
+    circles.forEach((c, idx) => { c.classList.toggle('active', idx === (count - 1)); });
 }
 
 function clearCircleActiveState() {
@@ -270,9 +235,9 @@ document.getElementById('rsvpForm').addEventListener('submit', function(e) {
     let finalGuests = document.getElementById('manualGuestInput').value || selectedGuestCountValue;
     if(!isAttendingWedding) finalGuests = 0;
     
-    alert(`Response Received! Status: ${isAttendingWedding ? 'Attending (' + finalGuests + ' guests)' : 'Declined'}. Securely archived in the Royal Vault.`);
+    alert(`Response Saved! Response archived securely in the Royal Vault.`);
     this.reset();
     setRSVPStatus(true);
     selectGuestCount(1);
 });
-            
+                                                     
